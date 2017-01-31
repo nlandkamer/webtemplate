@@ -1,0 +1,21 @@
+{
+  "name": "template",
+  "description": "a basic template for quick websites",
+  "main": "index.js",
+  "authors": [
+    "nila"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-bootstrap": "^2.5.0"
+  }
+}
