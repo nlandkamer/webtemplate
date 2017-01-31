@@ -1,1 +1,1 @@
-After pull, make sure to run the commands 'npm install' and 'bower install'
+After pull, make sure to run the commands 'npm install' and 'bower install', then run 'gulp initialize'

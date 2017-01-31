@@ -17,6 +17,6 @@ gulp.task('moveBower', function(){
     .pipe(gulp.dest('./lib/'));
 });
 
-gulp.task('initialize', ['moveBower']);
+gulp.task('initialize', ['moveBower', 'sass']);
 
 gulp.task('default', ['watch']);
