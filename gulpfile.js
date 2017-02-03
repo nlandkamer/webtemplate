@@ -59,13 +59,13 @@ gulp.task('moveBower', function(){
 });
 
 gulp.task('watch', ['browser-sync'], function(){
+    gulp.watch('./sass/**/*.scss', ['sass']);
+    gulp.watch(['./js/**/*.js', '!./js/scripts.js'], ['scripts']);
     gulp.watch('./*.html', ['moveHtml']);
     gulp.watch('./htmlTemplates/**/*.html', ['moveTemplates']);
-    gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./css/**/*.*', ['moveCss']);
     gulp.watch('./js/scripts.js', ['moveJs']);
     gulp.watch('./lib/**/*.*', ['moveLib']);
-    gulp.watch(['./js/**/*.js', '!./js/scripts.js'], ['scripts']);
     gulp.watch('./dist/**/*.*').on('change', bs.reload);
 });
 
