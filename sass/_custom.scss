@@ -1,0 +1,29 @@
+.main-head {
+    text-align: center;
+    color:rgb(200,200,200);
+    background-color: darkorange;
+}
+
+.navbar {
+    border-radius:0;
+}
+
+.navbar-default, .navbar-inverse{
+    .navbar-toggle {
+        padding: 3px 4px;
+        border:none;
+        margin-top:5px;
+        transition: all .18s ease-in-out;
+        &:hover {
+            transform: rotate(-180deg);
+            background-color: transparent;
+            .icon-bar {
+                background-color:$navbar-inverse-toggle-icon-bar-hover-bg;
+            }   
+        }
+    }
+}
+
+.fixed {
+    position: fixed;
+}
