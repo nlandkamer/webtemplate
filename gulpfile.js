@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
-    bs = require('browser-sync').create();
+    bs = require('browser-sync').create(),
+    runSequence = require('run-sequence');
 
 gulp.task('sass', function(){
     gulp.src('./sass/**/*.scss')
@@ -69,6 +70,8 @@ gulp.task('watch', ['browser-sync'], function(){
     gulp.watch('./dist/**/*.*').on('change', bs.reload);
 });
 
-gulp.task('initialize', ['moveBower', 'sass', 'scripts', 'build']);
+gulp.task('initialize', function(){
+    runSequence('moveBower', 'sass', 'scripts', 'build');
+});
 
 gulp.task('default', ['watch']);
