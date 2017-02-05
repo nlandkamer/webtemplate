@@ -6,12 +6,16 @@
     </head>
     <body>
         <div class="container-fluid">
-            <top-navbar sitename="My Template"></top-navbar>
-            <test-stuff></test-stuff>
+            <main-header></main-header>
+            <div class="main-body">
+                <top-navbar sitename="My Template"></top-navbar>
+                <div ng-view></div>
+            </div>
         </div>
 
         <script src="lib/angular/angular.min.js"></script>
         <script src="lib/angular-animate/angular-animate.min.js"></script>
+        <script src="lib/angular-route/angular-route.min.js"></script>
         <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>

@@ -37,7 +37,7 @@ gulp.task('moveJs', function(){
         .pipe(gulp.dest('./dist/'));
 });
 gulp.task('moveTemplates', function(){
-    return gulp.src(['./htmlTemplates/**/*'], {base: './'})
+    return gulp.src(['./htmlTemplates/**/*.*'], {base: './'})
         .pipe(gulp.dest('./dist/'));
 });
 gulp.task('moveLib', function(){
@@ -62,7 +62,7 @@ gulp.task('watch', ['browser-sync'], function(){
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch(['./js/**/*.js', '!./js/scripts.js'], ['scripts']);
     gulp.watch('./*.html', ['moveHtml']);
-    gulp.watch('./htmlTemplates/**/*.html', ['moveTemplates']);
+    gulp.watch('./htmlTemplates/**/*.*.html', ['moveTemplates']);
     gulp.watch('./css/**/*.*', ['moveCss']);
     gulp.watch('./js/scripts.js', ['moveJs']);
     gulp.watch('./lib/**/*.*', ['moveLib']);

@@ -1,7 +1,11 @@
+$topMargin: 100px;
 .main-head {
     text-align: center;
     color:rgb(200,200,200);
-    background-color: darkorange;
+    background-color: darkblue;//darkorange;
+}
+.main-body {
+    margin-top: $topMargin;
 }
 
 .navbar {
@@ -26,4 +30,45 @@
 
 .fixed {
     position: fixed;
+}
+
+.site-header {
+    background-color:white;
+    z-index: 999;
+    height: $topMargin;
+    vertical-align: middle;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    p {
+        line-height: $topMargin;
+        vertical-align: middle;
+        margin:0 0 0 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: $topMargin;
+        vertical-align: middle;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
+@media only screen and (max-width:575px){
+    .site-header {
+        p {
+            font-size: 2em;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 2em;
+        }
+    }
+}
+@media only screen and (max-width:440px){
+    .site-header {
+        p {
+            font-size: 1.6em;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 1.6em;
+        }
+    }
 }
